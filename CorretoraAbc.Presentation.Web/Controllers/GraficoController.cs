@@ -2,12 +2,10 @@
 using CorretoraAbc.Presentation.Web.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace CorretoraAbc.Presentation.Web.Controllers
 {

@@ -3,13 +3,10 @@ using CorretoraAbc.Domain.Core.Entities;
 using CorretoraAbc.Domain.Core.Interfaces.Services;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CorretoraAbc.Aplicacao.Core.Aplicacao
 {
-   public class AcaoAplicacao : IAcaoAplicacao
+    public class AcaoAplicacao : IAcaoAplicacao
     {
         private readonly IAcaoService _acaoService;
 

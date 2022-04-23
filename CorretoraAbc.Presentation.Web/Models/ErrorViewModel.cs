@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace CorretoraAbc.Presentation.Web.Models
+﻿namespace CorretoraAbc.Presentation.Web.Models
 {
     public class ErrorViewModel
     {

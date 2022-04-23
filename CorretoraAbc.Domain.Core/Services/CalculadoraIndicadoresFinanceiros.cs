@@ -3,11 +3,8 @@ using CorretoraAbc.Domain.Core.Entities;
 using CorretoraAbc.Domain.Core.Interfaces.Services;
 using CorretoraAbc.Domain.Core.Util;
 using Skender.Stock.Indicators;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace CorretoraAbc.Domain.Core.Services
 {

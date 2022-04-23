@@ -2,11 +2,9 @@
 using CorretoraAbc.Aplicacao.Core.Interfaces;
 using CorretoraAbc.Presentation.Web.Models;
 using Microsoft.AspNetCore.Mvc;
-using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace CorretoraAbc.Presentation.Web.Controllers
 {
