@@ -1,0 +1,111 @@
+﻿@model IEnumerable<CorretoraAbc.Presentation.Web.Models.HomeViewModel>
+
+@{
+    ViewData["Title"] = "Pagina Corretora Abc";
+}
+
+<div class="text-center">
+    <h4 class="display-4">Relação de Dados do Período</h4>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th class="data">
+                    Data
+                </th>
+                <th>
+                    Fechamento
+                </th>
+                <th>
+                    EMA 9
+                </th>
+                <th>
+                    EMA 12
+                </th>
+                <th>
+                    EMA 26
+                </th>
+                <th>
+                    MACD
+                </th>
+                <th>
+                    MACD Signal
+                </th>
+                <th>
+                    MACD Histograma
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var model in Model)
+            {
+                <tr>
+                    <td class="data">
+                        @Html.Raw(model.Data.ToString("dd-MM-yyyy"))
+                    </td>
+                    <td>
+                        @Html.Raw(model.FechamentoDoDia.ToString("#,##0.00"))
+                    </td>
+                    <td>
+                        @Html.Raw(model.Ema9.ToString("#,##0.00"))
+                    </td>
+                    <td>
+                        @Html.Raw(model.Ema12.ToString("#,##0.00"))
+                    </td>
+                    <td>
+                        @Html.Raw(model.Ema26.ToString("#,##0.00"))
+                    </td>
+                    <td>
+                        @Html.Raw(model.Macd.ToString("#,##0.00"))
+                    </td>
+                    <td>
+                        @Html.Raw(model.MacdSignal.ToString("#,##0.00"))
+                    </td>
+                    <td>
+                        @Html.Raw(model.MacdHistograma.ToString("#,##0.00"))
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>
+
+<style>
+    table, td {
+        border-collapse: collapse;
+    }
+
+    thead {
+        display: table;
+        width: calc(100% - 17px);
+    }
+
+    tbody {
+        display: block;
+        max-height: 600px;
+        overflow-y: scroll;
+    }
+
+    th, td {
+        width: 12.5%;
+        padding: 5px;
+        word-break: break-all;
+    }
+
+    .data {
+        width: 9%;
+    }
+
+    tr {
+        display: table;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    td {
+        text-align: center;
+        border-bottom: none;
+        border-left: none;
+    }
+</style>
