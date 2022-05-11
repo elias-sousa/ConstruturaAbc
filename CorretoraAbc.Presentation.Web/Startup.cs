@@ -22,13 +22,14 @@ namespace CorretoraAbc.Presentation.Web
         {
 
             services.AddControllers();
-
             services.Configurar(Configuration);
 
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "CorretoraAbc.Presentation.Web", Version = "v1" });
             });
+
+           
 
         }
 
@@ -47,7 +48,7 @@ namespace CorretoraAbc.Presentation.Web
             app.UseRouting();
 
             app.UseAuthorization();
-
+            
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

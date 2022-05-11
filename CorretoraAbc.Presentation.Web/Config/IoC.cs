@@ -23,15 +23,15 @@ namespace CorretoraAbc.Presentation.Web.Config
                 options.UseSqlServer(connection);
             });
 
-            services.AddSingleton(typeof(IBase<>), typeof(BaseRepository<>));
-            services.AddSingleton<IAcaoAplicacao, AcaoAplicacao>();
-            services.AddSingleton<ICotacaoAplicacao, CotacaoAplicacao>();
-            services.AddSingleton<IAcaoService, AcaoService>();
-            services.AddSingleton<ICotacaoService, CotacaoService>();
-            services.AddSingleton<IAcaoRepository, AcaoRepository>();
-            services.AddSingleton<ICotacaoRepository, CotacaoRepository>();
-            services.AddSingleton<ICalculadoraIndicadoresFinanceiros, CalculadoraIndicadoresFinanceiros>();
-            services.AddSingleton<IDadosFinanceirosAplicacao, DadosFinanceirosAplicacao>();
+            services.AddTransient(typeof(IBase<>), typeof(BaseRepository<>));
+            services.AddTransient<IAcaoAplicacao, AcaoAplicacao>();
+            services.AddTransient<ICotacaoAplicacao, CotacaoAplicacao>();
+            services.AddTransient<IAcaoService, AcaoService>();
+            services.AddTransient<ICotacaoService, CotacaoService>();
+            services.AddTransient<IAcaoRepository, AcaoRepository>();
+            services.AddTransient<ICotacaoRepository, CotacaoRepository>();
+            services.AddTransient<ICalculadoraIndicadoresFinanceiros, CalculadoraIndicadoresFinanceiros>();
+            services.AddTransient<IDadosFinanceirosAplicacao, DadosFinanceirosAplicacao>();
         }
     }
 }
