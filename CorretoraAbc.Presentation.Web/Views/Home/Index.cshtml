@@ -4,73 +4,78 @@
     ViewData["Title"] = "Pagina Corretora Abc";
 }
 
-<div class="text-center">
-    <h4 class="display-4">Relação de Dados do Período</h4>
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
 
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="data">
-                    Data
-                </th>
-                <th>
-                    Fechamento
-                </th>
-                <th>
-                    EMA 9
-                </th>
-                <th>
-                    EMA 12
-                </th>
-                <th>
-                    EMA 26
-                </th>
-                <th>
-                    MACD
-                </th>
-                <th>
-                    MACD Signal
-                </th>
-                <th>
-                    MACD Histograma
-                </th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (var model in Model)
-            {
-                <tr>
-                    <td class="data">
-                        @Html.Raw(model.Data.ToString("dd-MM-yyyy"))
-                    </td>
-                    <td>
-                        @Html.Raw(model.FechamentoDoDia.ToString("#,##0.00"))
-                    </td>
-                    <td>
-                        @Html.Raw(model.Ema9.ToString("#,##0.00"))
-                    </td>
-                    <td>
-                        @Html.Raw(model.Ema12.ToString("#,##0.00"))
-                    </td>
-                    <td>
-                        @Html.Raw(model.Ema26.ToString("#,##0.00"))
-                    </td>
-                    <td>
-                        @Html.Raw(model.Macd.ToString("#,##0.00"))
-                    </td>
-                    <td>
-                        @Html.Raw(model.MacdSignal.ToString("#,##0.00"))
-                    </td>
-                    <td>
-                        @Html.Raw(model.MacdHistograma.ToString("#,##0.00"))
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
-
+<div class="container">
+    <div class="text-center">
+        <h4 class="display-4">Relação de Dados do Período</h4>
+        <div class="table-responsive-md">
+            <table class="table table-striped table-hover table-borderless align-middle">
+                <thead>
+                    <tr>
+                        <th class="data">
+                            Data
+                        </th>
+                        <th>
+                            Fechamento
+                        </th>
+                        <th>
+                            EMA 9
+                        </th>
+                        <th>
+                            EMA 12
+                        </th>
+                        <th>
+                            EMA 26
+                        </th>
+                        <th>
+                            MACD
+                        </th>
+                        <th>
+                            MACD Signal
+                        </th>
+                        <th>
+                            MACD Histograma
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var model in Model)
+                    {
+                        <tr>
+                            <td class="data">
+                                @Html.Raw(model.Data.ToString("dd-MM-yyyy"))
+                            </td>
+                            <td>
+                                @Html.Raw(model.FechamentoDoDia.ToString("#,##0.00"))
+                            </td>
+                            <td>
+                                @Html.Raw(model.Ema9.ToString("#,##0.00"))
+                            </td>
+                            <td>
+                                @Html.Raw(model.Ema12.ToString("#,##0.00"))
+                            </td>
+                            <td>
+                                @Html.Raw(model.Ema26.ToString("#,##0.00"))
+                            </td>
+                            <td>
+                                @Html.Raw(model.Macd.ToString("#,##0.00"))
+                            </td>
+                            <td>
+                                @Html.Raw(model.MacdSignal.ToString("#,##0.00"))
+                            </td>
+                            <td>
+                                @Html.Raw(model.MacdHistograma.ToString("#,##0.00"))
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
 </div>
-
 <style>
     table, td {
         border-collapse: collapse;
@@ -109,3 +114,5 @@
         border-left: none;
     }
 </style>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
