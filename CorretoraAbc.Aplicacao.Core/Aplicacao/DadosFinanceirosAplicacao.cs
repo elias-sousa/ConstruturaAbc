@@ -19,9 +19,9 @@ namespace CorretoraAbc.Aplicacao.Core.Aplicacao
 
         public DadosEMAeMACDparaGrafico MonteDadosDeEMAeMACDParaListagem(List<Cotacao> cotacoes)
         {
-            var valoresEma9 = _calculadoraIndicadoresFinanceiros.CalculeEma(cotacoes, 9);
-            var valoresEma12 = _calculadoraIndicadoresFinanceiros.CalculeEma(cotacoes, 12);
-            var valoresEma26 = _calculadoraIndicadoresFinanceiros.CalculeEma(cotacoes, 26);
+            var valoresEma9 = _calculadoraIndicadoresFinanceiros.CalculeEma(cotacoes, 10);
+            var valoresEma12 = _calculadoraIndicadoresFinanceiros.CalculeEma(cotacoes, 15);
+            var valoresEma26 = _calculadoraIndicadoresFinanceiros.CalculeEma(cotacoes, 30);
             var valoresMacd = _calculadoraIndicadoresFinanceiros.CalculeMacd(cotacoes);
 
             return new DadosEMAeMACDparaGrafico(cotacoes, valoresEma9, valoresEma12, valoresEma26, valoresMacd);
